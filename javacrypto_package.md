@@ -22,3 +22,10 @@ byte[] output = mac.doFinal(input);
 ```public class KeyGenerator extends Object```
 
 用来产生秘密密钥 SecretKey
+
+## KeyAggrement 
+
+```public class KeyAgreement extends Object```
+
+密钥协定，在DH算法中将被使用
+
