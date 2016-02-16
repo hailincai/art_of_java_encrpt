@@ -8,6 +8,17 @@
 
 使用CertificateFactory导入存在的证书
 
+## CertPath 
+
+证书链
+
+```java
+CertificateFactory cf = CertificateFactory.getInstance("X.509");
+FileInputStream fis = new FileInputStream("key_file");
+CertPath crtPath = cf.generateCertPath(fis);
+in.close();
+```
+
 ## CRL 
 
 验证证书是否已经被revoke 
