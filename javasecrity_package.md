@@ -118,3 +118,11 @@ sign.initVerify(kp.getPublicKey());
 sign.update(data);
 sign.verify(signResult);
 ```
+
+## KeyStore
+
+```public class KeyStore extends Object```
+
+用户管理密钥和证书的存储，基本使用的就2中类型JKS和PKCS12. PKCS12只读
+
+## 其他对象 ```SignObject```, ```Timestamp```, ```CodeSigner```
