@@ -5,5 +5,5 @@
    * [java.secrity package](javasecrity_package.md)
    * [java.crypto package](javacrypto_package.md)
    * [java.security.spec && java.crypto.spec](javasecurityspec_&&_javacryptospec.md)
-   * java.security.cert
+   * [java.security.cert](javasecuritycert.md)
 
