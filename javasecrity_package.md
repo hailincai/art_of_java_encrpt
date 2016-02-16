@@ -92,4 +92,29 @@ Key privateKey = kf.generatePrivateKey(keySpec);
 * 更新
 * 签署或者验证签名
 
+```java
+//签名初始化
+void initSign(PrivateKey private)
 
+//验证初始化
+void initVerify(PublicKey public)
+void initVerify(Certificate certificate)
+```
+
+```java
+byte[] data = "Hello World".getBytes();
+KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
+kpg.initialize(1024);
+KeyPair kp = kpg.generateKeyPair();
+
+//signature
+Signature sign = Signature.getInstance(kpg.getAlgorithm());
+sign.initSign(kp.getPrivateKey());
+sign.update(data);
+byte[] signResult = sign.sign();
+
+//verify signature
+sign.initVerify(kp.getPublicKey());
+sign.update(data);
+sign.verify(signResult);
+```
