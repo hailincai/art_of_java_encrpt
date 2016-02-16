@@ -9,9 +9,9 @@ Key class是密钥接口的顶层接口，每个密钥有3个通用的属性
 
 # SecurityKey, PublicKey and PrivateKey  
 
-### SecurityKey (???)
+### SecretKey (???)
 
-SecurityKey是对称密钥顶层接口, 对称加密技术使用对称密钥。Mac算法也使用SecurityKey接口来提供秘密密钥，具体的实现类是```SecurityKeySpec```.
+SecretKey, 对称加密技术使用对称密钥。Mac算法也使用SecurityKey接口来提供秘密密钥，具体的实现类是```SecretKeySpec```.
 
 ### PublicKey and PrivateKey
 
