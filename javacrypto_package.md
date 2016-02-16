@@ -23,9 +23,37 @@ byte[] output = mac.doFinal(input);
 
 用来产生秘密密钥 SecretKey
 
-## KeyAggrement 
+## KeyAggrement ( skip for now, not need now )
 
 ```public class KeyAgreement extends Object```
 
 密钥协定，在DH算法中将被使用
 
+
+## SecretKeyFactory 
+
+```java
+KeyGenerator kg = KeyGenerator.getInstance("DES");
+SecretKey key = kp.generateKey();
+byte[] keyOutput = key.getEncoded();
+
+DESKeySpec kspec = new DESKeySpec(keyOutput);
+SecretKeyFactory kf = SecretKeyFactory.getInstance("DES");
+SecretKey resotreKey = kf.generateSecret(kspec);
+```
+
+## Cipher 
+
+```public class Cipher extends Object```
+
+加解密核心类， 
+
+
+```java
+Cipher cipher = Cipher.getInstace("算法/工作模式/填充模式");
+cipher.init(int opMode, Key)//opMode means加密还是解密
+cipher.init(int opMode, Key, AlgorithmParameters)
+cipher.init(int opMode, Key, AlgorithmParameterSpec)
+//使用公钥初始化
+cipher.init(int opMode, Certificate certificate);
+```
