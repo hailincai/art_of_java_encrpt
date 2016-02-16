@@ -45,9 +45,6 @@ System.out.println(new BigInteger(b).toString());
 
 非对称密钥的载体，内部包含PublicKey和PrivateKey
 
-## KeyGenerator 
-
-产生的是对称密钥
 
 ## KeyPairGenerator  
 
