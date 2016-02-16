@@ -10,5 +10,9 @@
 
 ```java
 byte[] input = "hello world!".getBytes();
-KeyGenerator kg = 
+KeyGenerator kg = KeyGenerator.getInstance("HmacMD5");
+SecretKey key = kp.generateKey();
+Mac mac = Mac.getInstance(kp.getAlgorithm());
+mac.init(key);
+byte[] output = mac.doFinal(input);
 ```
