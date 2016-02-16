@@ -57,7 +57,7 @@ KeyPair keys = kpg.genKeyPair();
 
 ## KeyFactory 
 
-根据密钥规范 ( ```KeySpec``` )，还原密钥  
+根据密钥规范 ( ```KeySpec``` )，还原密钥. 与之对应的是```SecretKeyFactory```，用来产生秘密密钥 (?)
 
 ```java
 KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
