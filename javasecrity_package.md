@@ -47,6 +47,8 @@ System.out.println(new BigInteger(b).toString());
 
 ## KeyPairGenerator  
 
+```public class KeyPairGenerator extends KeyPairGenratorSpi```
+
 非对称密钥生成器
 
 ```java
@@ -56,6 +58,8 @@ KeyPair keys = kpg.genKeyPair();
 ```
 
 ## KeyFactory 
+
+```public class KeyFactory extends Object```
 
 根据密钥规范 ( ```KeySpec``` )，还原密钥. 与之对应的是```SecretKeyFactory```，用来产生秘密密钥 (?)
 
@@ -69,3 +73,23 @@ PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes); //why is this s
 KeyFactory kf = KeyFactory.getInstance("RSA");
 Key privateKey = kf.generatePrivateKey(keySpec);
 ```
+
+## SecureRandom
+
+```public class SecureRandom extends Random```
+
+产生强随机数，各种Security类初始化都会用到。
+
+## Signature 
+
+```public abstract class Signature extends SignatureSpi```
+
+用于生成和验证数字签名，支持的算法包括```NONEWithDSA```, ```SHA1withDSA```, ```MD2withRSA```, ```MD5withRSA```, ```SHA1withRSA```, ```SHA256withRSA```, ```SHA384withRSA```
+
+使用3步骤
+
+* 初始化
+* 更新
+* 签署或者验证签名
+
+
