@@ -16,3 +16,9 @@ Mac mac = Mac.getInstance(kp.getAlgorithm());
 mac.init(key);
 byte[] output = mac.doFinal(input);
 ```
+
+## KeyGenerator
+
+```public class KeyGenerator extends Object```
+
+用来产生秘密密钥 SecretKey
